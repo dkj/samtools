@@ -932,13 +932,13 @@ static int bam_mark_duplicates(md_param_t *param) {
 
             in_read->b->core.flag ^= BAM_FDUP;
 
-	    if ((data = bam_aux_get(in_read->b, "dt")) != NULL) {
-	    	bam_aux_del(in_read->b, data);
-	    }
+            if ((data = bam_aux_get(in_read->b, "dt")) != NULL) {
+                bam_aux_del(in_read->b, data);
+            }
 
-	    if ((data = bam_aux_get(in_read->b, "do")) != NULL) {
-	    	bam_aux_del(in_read->b, data);
-	    }
+            if ((data = bam_aux_get(in_read->b, "do")) != NULL) {
+                bam_aux_del(in_read->b, data);
+            }
         }
 
         if (param->include_fails) {
